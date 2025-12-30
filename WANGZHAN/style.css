@@ -1,0 +1,906 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", "宋体", serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 头部背景图片区域 */
+#headerBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    z-index: 0;
+}
+
+/* 头部样式 */
+header {
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid #333;
+    margin-bottom: 25px;
+    padding: 25px 0 15px;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px 20px 5px;
+}
+
+nav {
+    text-align: center;
+    margin: 10px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 8px;
+    padding: 6px 12px;
+    background-color: #333;
+    border: 1px solid #333;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.nav-link:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.nav-link.active {
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+/* 主内容区域 */
+main {
+    position: relative;
+    z-index: 5;
+    min-height: 400px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.view {
+    display: none;
+}
+
+.view.active {
+    display: block;
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* 文章列表样式 */
+#articleList {
+    margin-bottom: 30px;
+}
+
+.article-item {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+.article-item:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.article-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.article-meta {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.article-preview {
+    color: #555;
+    line-height: 1.5;
+}
+
+.article-image {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+/* 管理页面样式 */
+#newArticleBtn {
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+#newArticleBtn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.manage-article-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manage-article-info h4 {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.manage-article-meta {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.manage-article-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.manage-article-actions button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 文章详情样式 */
+#articleDetail {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+#backBtn {
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#backBtn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+#articleTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#articleContent {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+#articleContent img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+/* 操作按钮样式 */
+.article-actions {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin: 15px 0;
+}
+
+.article-actions button {
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.article-actions button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 评论区域样式 */
+#commentsSection {
+    margin-top: 20px;
+}
+
+#commentsSection h4 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.comment-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #fff;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.comment-author {
+    font-weight: bold;
+}
+
+.comment-time {
+    color: #666;
+}
+
+.comment-content {
+    line-height: 1.5;
+}
+
+/* 评论表单样式 */
+#commentForm {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+#commentForm input,
+#commentForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    font-family: inherit;
+    font-size: 0.9em;
+}
+
+#commentForm button {
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#commentForm button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 新建文章表单样式 */
+#newArticleForm {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fafafa;
+    margin-top: 20px;
+}
+
+#newArticleForm h3 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+#newArticleForm input,
+#newArticleForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+#newArticleForm textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-actions {
+    margin-top: 15px;
+}
+
+.form-actions button {
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form-actions button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+#imagePreview {
+    margin-top: 10px;
+}
+
+#imagePreview img {
+    max-width: 200px;
+    max-height: 150px;
+    border: 1px solid #ddd;
+}
+
+/* 关于页面样式 */
+.site-stats {
+    margin-top: 20px;
+}
+
+.site-stats p {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+/* 空状态样式 */
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}
+
+/* 绘画板样式 */
+.drawing-tools {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.drawing-tools button {
+    margin: 0 5px;
+    padding: 8px 15px;
+    border: 1px solid #333;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.drawing-tools button:hover {
+    background-color: #e0e0e0;
+}
+
+.drawing-tools input[type="color"] {
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.drawing-tools input[type="range"] {
+    margin: 0 10px;
+    width: 100px;
+}
+
+#drawingCanvas {
+    border: 2px solid #333;
+    display: block;
+    margin: 0 auto 20px;
+    cursor: crosshair;
+}
+
+#drawingList {
+    margin-top: 30px;
+}
+
+#drawingList h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#savedDrawings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.drawing-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.drawing-item img {
+    max-width: 100%;
+    max-height: 120px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.drawing-info {
+    margin-top: 8px;
+}
+
+.drawing-info small {
+    color: #666;
+    font-size: 0.8em;
+}
+
+/* 绘画作品模态窗口 */
+.drawing-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.drawing-modal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+.drawing-modal .modal-content img {
+    max-width: 100%;
+    max-height: 70vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+.drawing-meta {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.drawing-meta small {
+    color: #666;
+}
+
+/* 页脚样式 */
+footer {
+    border-top: 2px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* 留言板样式 */
+.message-form {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.message-form h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.message-form input,
+.message-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #333;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.message-form button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.message-form button:hover {
+    background-color: #555;
+}
+
+/* 绘画留言样式 */
+.message-drawing-form {
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.message-drawing-form h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.drawing-tools {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.drawing-tools button {
+    margin: 0 5px;
+    padding: 8px 15px;
+    border: 1px solid #333;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.drawing-tools button:hover {
+    background-color: #e0e0e0;
+}
+
+.drawing-tools input[type="color"] {
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.drawing-tools input[type="range"] {
+    margin: 0 10px;
+    width: 100px;
+}
+
+#messageCanvas {
+    border: 2px solid #333;
+    display: block;
+    margin: 0 auto 20px;
+    cursor: crosshair;
+}
+
+.message-drawing-form input[type="text"] {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #333;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.messages-list {
+    margin-top: 30px;
+}
+
+.messages-list h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#messagesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fff;
+    border-left: 4px solid #333;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.message-time {
+    color: #666;
+    font-size: 0.85em;
+}
+
+.message-content {
+    line-height: 1.6;
+    color: #333;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* 绘画留言样式 */
+.drawing-message {
+    border-left: 4px solid #666;
+}
+
+.message-drawing {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.message-drawing img {
+    max-width: 100%;
+    max-height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.message-drawing img:hover {
+    opacity: 0.8;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+    
+    nav {
+        padding: 6px 15px;
+    }
+    
+    .nav-link {
+        display: inline-block;
+        margin: 3px 5px;
+        padding: 5px 10px;
+        font-size: 0.85em;
+    }
+    
+    header {
+        padding: 20px 0 10px;
+        margin-bottom: 20px;
+    }
+    
+    #articleDetail {
+        padding: 15px;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    header, footer, .article-actions, #commentForm, #newArticleForm {
+        display: none;
+    }
+    
+    body {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .article-item {
+        border: none;
+        page-break-inside: avoid;
+    }
+}
+
+/* 首页样式 */
+.home-content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.home-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.welcome-text {
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.welcome-text p {
+    margin: 10px 0;
+}
+
+/* 图片上传样式 */
+.image-upload {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.image-upload h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.image-upload input[type="file"],
+.image-upload input[type="text"] {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #333;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.image-upload button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.image-upload button:hover {
+    background-color: #555;
+}
+
+/* 图片画廊样式 */
+#imageGallery {
+    margin-top: 30px;
+}
+
+#imageGallery h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#imagesContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.featured-image-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    max-width: 600px;
+    transition: transform 0.2s ease;
+}
+
+.featured-image-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.featured-image {
+    max-width: 100%;
+    max-height: 400px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featured-image-container .image-info h4 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.featured-image-container .image-info small {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* 图片模态窗口 */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.image-modal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    text-align: center;
+}
+
+.image-modal .modal-content img {
+    max-width: 100%;
+    max-height: 70vh;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.image-modal .modal-content h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.image-modal .modal-content .image-meta small {
+    color: #666;
+    font-size: 0.9em;
+}
